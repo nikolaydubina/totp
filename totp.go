@@ -15,7 +15,7 @@ var (
 	Digits                 = 10
 )
 
-// TOTP is Time based One-Time Password RFC-6238
+// TOTP is Time-based One-Time Password RFC-6238
 func TOTP(t time.Time, key []byte) string { return HOTP(timeStepWindow(t, TimeZero, TimeStep), key) }
 
 // HOTP is HMAC-based One-Time Password RFC-4226
